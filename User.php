@@ -8,16 +8,21 @@ class User
     public $email = "Email";
     public $city = "City";
 
+    public function hello(){
+        echo "Hello {$this->name}";
+    }
+
+    function getInfo(){
+        return "$this->name" ." $this->surname";
+    }
+
 }
 
-$admin = new User();
-$user1 = new User();
-
+$admin  = new User();
 $admin->name = "Danik";
-$user1->name = "Moldir";
+$admin->surname = "Myrzakanov";
+$admin-> hello();
+echo "\nUser : {$admin->getInfo()}";
 
-echo $admin->name;
-echo $user1->name;
-$user1->surname = "Myrzakanov";
-echo $user1->surname;
+
 
