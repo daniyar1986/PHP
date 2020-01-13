@@ -19,7 +19,8 @@ if (!$conn2){
 echo "Connection successfully";
 
 try {
-    $PDO_conn =  new PDO("mysql:host:=$server_name; dbname=newDB",$user_name,$password);
+    $PDO_conn =  new PDO("mysql:host=$server_name; mysql:dbname=newDB;
+    unix_socket=/opt/lampp/var/mysql/mysql.sock",$user_name,$password);
     echo "Connection successfully";
 } catch (PDOException $exception){
     echo "Connection failed :".$exception->getMessage();
