@@ -1,5 +1,5 @@
 <?php
-
+@require_once 'file.txt';
 
 class Car
 {
