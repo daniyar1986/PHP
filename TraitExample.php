@@ -1,25 +1,27 @@
 <?php
 
-class Base{
-    function sayHello(){
-        echo "Hello";
-    }
-}
+//class Base{
+//    function sayHello(){
+//        echo "Hello";
+//    }
+//}
+
 trait Hello{
     function sayHello(){
         echo "Hello";
     }
 }
-trait sayWorld{
-    function sayHello(){
-        parent::sayHello();
+trait World{
+    function sayWorld(){
+//        parent::sayHello();
         echo " World";
     }
 }
 
-class MyHelloWorld extends Base{
-    use sayWorld;
+class MyHelloWorld {
+    use Hello,World;
 }
 
 $obj = new  MyHelloWorld();
 $obj->sayHello();
+$obj->sayWorld();
