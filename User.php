@@ -1,5 +1,6 @@
 <?php
 
+namespace Home;
 
 class User
 {
@@ -28,16 +29,16 @@ class User
     }
 
     function getInfo(){
-        return "$this->name" ." $this->surname $this->city $this->email $this->password";
+        return "$this->name" ." $this->city $this->email $this->password";
     }
 
 }
-
-$admin  = new User("Danik","Danik2","dan_ntu@mail.ru","Almaty");
-$admin->name = "Danik";
-$admin->surname = "Myrzakanov";
-$admin-> hello();
-echo "\nUser : {$admin->getInfo()}";
+//
+//$admin  = new User("Danik","Danik2","dan_ntu@mail.ru","Almaty");
+//$admin->name = "Danik";
+//$admin->surname = "Myrzakanov";
+//$admin-> hello();
+//echo "\nUser : {$admin->getInfo()}";
 
 
 
@@ -75,11 +76,11 @@ class Moderator extends User
     }
 }
 
-$moder = new Moderator("Danik","Danik2","dan_ntu@mail.ru",
-    "Almaty","info","rights");
-
-$moder->surname = "Myrzakanov";
-
-echo $moder->hello();
-echo $moder->getInfo();
+//$moder = new Moderator("Danik","Danik2","dan_ntu@mail.ru",
+//    "Almaty","info","rights");
+//
+//$moder->surname = "Myrzakanov";
+//
+//echo $moder->hello();
+//echo $moder->getInfo();
 
